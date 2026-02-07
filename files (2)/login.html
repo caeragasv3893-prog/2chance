@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sessão - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <!-- Animated Background -->
+    <div class="auth-background">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+        <div class="bg-shape shape-4"></div>
+    </div>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <!-- Left Side - Branding -->
+        <div class="auth-branding">
+            <div class="auth-branding-content">
+                <div class="logo-large">
+                    <i class="fas fa-recycle"></i>
+                    <span>2chance</span>
+                </div>
+                <h1>Bem-vindo de volta!</h1>
+                <p>A maior plataforma portuguesa de compra e venda de produtos em segunda mão.</p>
+                
+                <div class="auth-features">
+                    <div class="auth-feature">
+                        <i class="fas fa-shield-check"></i>
+                        <div>
+                            <h3>100% Seguro</h3>
+                            <p>Proteção em todas as transações</p>
+                        </div>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>+10.000 Utilizadores</h3>
+                            <p>Comunidade ativa e confiável</p>
+                        </div>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-leaf"></i>
+                        <div>
+                            <h3>Sustentável</h3>
+                            <p>Ajuda o planeta a cada compra</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15.432</span>
+                        <span class="stat-label">Produtos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8.921</span>
+                        <span class="stat-label">Utilizadores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="auth-form-container">
+            <div class="auth-form-wrapper">
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Início
+                </a>
+
+                <div class="auth-header">
+                    <h2>Iniciar Sessão</h2>
+                    <p>Insere os teus dados para aceder à tua conta</p>
+                </div>
+
+                <!-- Social Login -->
+                <div class="social-login">
+                    <button class="btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Continuar com Google
+                    </button>
+                    <button class="btn-social btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Continuar com Facebook
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>ou com email</span>
+                </div>
+
+                <!-- Login Form -->
+                <form class="auth-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="o-teu-email@exemplo.com"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i>
+                            Password
+                        </label>
+                        <div class="password-input">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="••••••••"
+                                required
+                                autocomplete="current-password"
+                            >
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            <span>Lembrar-me</span>
+                        </label>
+                        <a href="recuperar-password.html" class="forgot-password">
+                            Esqueceste a password?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Entrar</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Ainda não tens conta? <a href="registar.html">Regista-te grátis</a></p>
+                </div>
+
+                <div class="auth-security">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Ligação segura e encriptada</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-advanced.js"></script>
+    <script>
+        // Login Form Handler
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const remember = document.querySelector('input[name="remember"]').checked;
+            
+            // Show loading
+            const submitBtn = this.querySelector('.btn-submit');
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> A entrar...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Mock successful login
+                const user = {
+                    id: Math.random().toString(36).substr(2, 9),
+                    name: 'João Silva',
+                    email: email,
+                    avatar: 'https://i.pravatar.cc/150?img=12',
+                    member_since: '2023-01-15',
+                    verified: true
+                };
+                
+                // Save to localStorage
+                localStorage.setItem('2chance_user', JSON.stringify(user));
+                localStorage.setItem('2chance_token', 'mock_jwt_token_' + Date.now());
+                
+                // Show success
+                showNotification('✅ Login efetuado com sucesso!', 'success');
+                
+                // Redirect to profile
+                setTimeout(() => {
+                    window.location.href = 'perfil.html';
+                }, 1000);
+            }, 1500);
+        });
+
+        // Toggle Password Visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        });
+
+        // Social Login Handlers
+        document.querySelectorAll('.btn-social').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const provider = this.classList.contains('btn-google') ? 'Google' : 'Facebook';
+                showNotification(`Login com ${provider} será implementado com OAuth`, 'info');
+            });
+        });
+
+        // Input Focus Effects
+        document.querySelectorAll('.auth-form input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

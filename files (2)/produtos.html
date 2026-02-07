@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html">Início</a>
+                        <a href="produtos.html" class="active">Produtos</a>
+                        <a href="categorias.html">Categorias</a>
+                        <a href="about.html">Sobre Nós</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="btn-icon" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn-icon" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </button>
+                        <button class="btn-icon" id="userBtn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="btn-primary" id="sellNowBtn">Vender Agora</button>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero-small">
+        <div class="container">
+            <h1 class="page-title">Todos os Produtos</h1>
+            <p class="page-subtitle">Descobre milhares de produtos em segunda mão</p>
+        </div>
+    </section>
+
+    <!-- Filters & Products -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filter-header">
+                        <h3>Filtros</h3>
+                        <button class="btn-clear-filters">Limpar Tudo</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Categoria</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="eletronica">
+                                <span>Eletrónica</span>
+                                <span class="filter-count">(2.345)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="moda">
+                                <span>Moda</span>
+                                <span class="filter-count">(4.567)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="casa">
+                                <span>Casa & Jardim</span>
+                                <span class="filter-count">(1.890)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="desporto">
+                                <span>Desporto</span>
+                                <span class="filter-count">(987)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="livros">
+                                <span>Livros</span>
+                                <span class="filter-count">(3.210)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Preço</h4>
+                        <div class="price-range">
+                            <input type="number" placeholder="Min" class="price-input">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" class="price-input">
+                        </div>
+                        <div class="price-slider">
+                            <input type="range" min="0" max="1000" value="0" class="range-min">
+                            <input type="range" min="0" max="1000" value="1000" class="range-max">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Condição</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="condition" value="novo">
+                                <span>Como Novo</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="condition" value="quase-novo">
+                                <span>Quase Novo</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="condition" value="bom">
+                                <span>Bom Estado</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="condition" value="aceitavel">
+                                <span>Estado Aceitável</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Localização</h4>
+                        <select class="filter-select">
+                            <option value="">Todas as Localizações</option>
+                            <option value="lisboa">Lisboa</option>
+                            <option value="porto">Porto</option>
+                            <option value="braga">Braga</option>
+                            <option value="coimbra">Coimbra</option>
+                            <option value="faro">Faro</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Envio</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="shipping" value="gratis">
+                                <span>Envio Grátis</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="shipping" value="express">
+                                <span>Envio Express</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Vendedor</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="seller" value="verificado">
+                                <span>Vendedor Verificado</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="seller" value="profissional">
+                                <span>Vendedor Profissional</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-toolbar">
+                        <div class="results-info">
+                            <strong>15.432</strong> produtos encontrados
+                        </div>
+                        <div class="toolbar-actions">
+                            <select class="sort-select">
+                                <option value="relevancia">Mais Relevantes</option>
+                                <option value="recentes">Mais Recentes</option>
+                                <option value="preco-asc">Preço: Menor para Maior</option>
+                                <option value="preco-desc">Preço: Maior para Menor</option>
+                                <option value="popular">Mais Populares</option>
+                            </select>
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Product Cards (16 items) -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Headphones">
+                                <span class="product-badge">Quase Novo</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Eletrónica</div>
+                                <h3 class="product-title">Headphones Bluetooth Sony WH-1000XM4</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Lisboa</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 2 horas</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">189€</span>
+                                        <span class="original-price">350€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Watch">
+                                <span class="product-badge popular">Popular</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Moda</div>
+                                <h3 class="product-title">Relógio Clássico Couro Genuíno</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Porto</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 5 horas</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">45€</span>
+                                        <span class="original-price">120€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop" alt="Sneakers">
+                                <span class="product-badge">Como Novo</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Moda</div>
+                                <h3 class="product-title">Ténis Desportivos Nike Air Max</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Braga</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 1 dia</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">65€</span>
+                                        <span class="original-price">140€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1585399000684-d2f72660f092?w=400&h=400&fit=crop" alt="Camera">
+                                <span class="product-badge">Bom Estado</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Eletrónica</div>
+                                <h3 class="product-title">Câmara Digital Canon EOS 2000D</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Coimbra</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 3 horas</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">320€</span>
+                                        <span class="original-price">550€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop" alt="Sunglasses">
+                                <span class="product-badge">Como Novo</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Moda</div>
+                                <h3 class="product-title">Óculos de Sol Ray-Ban Aviator</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Faro</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 4 horas</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">85€</span>
+                                        <span class="original-price">160€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop" alt="Books">
+                                <span class="product-badge">Bom Estado</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Livros</div>
+                                <h3 class="product-title">Coleção Harry Potter (7 livros)</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Aveiro</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 1 dia</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">45€</span>
+                                        <span class="original-price">120€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=400&fit=crop" alt="Laptop">
+                                <span class="product-badge">Quase Novo</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Eletrónica</div>
+                                <h3 class="product-title">MacBook Air M1 13" 256GB</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Lisboa</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 6 horas</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">750€</span>
+                                        <span class="original-price">1.200€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop" alt="Running Shoes">
+                                <span class="product-badge">Como Novo</span>
+                                <button class="btn-favorite">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Desporto</div>
+                                <h3 class="product-title">Sapatilhas Running Adidas Ultraboost</h3>
+                                <div class="product-meta">
+                                    <span class="product-location"><i class="fas fa-map-marker-alt"></i> Porto</span>
+                                    <span class="product-time"><i class="far fa-clock"></i> Há 8 horas</span>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">
+                                        <span class="current-price">95€</span>
+                                        <span class="original-price">180€</span>
+                                    </div>
+                                    <button class="btn-add-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination-btn" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn">4</button>
+                        <button class="pagination-btn">5</button>
+                        <span class="pagination-dots">...</span>
+                        <button class="pagination-btn">24</button>
+                        <button class="pagination-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <p class="footer-desc">A plataforma portuguesa de compra e venda de produtos em segunda mão. Sustentável, económica e segura.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="produtos.html">Todos os Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="vendedores.html">Vendedores Verificados</a></li>
+                        <li><a href="promocoes.html">Promoções</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="contact.html">Ajuda</a></li>
+                        <li><a href="como-vender.html">Como Vender</a></li>
+                        <li><a href="como-comprar.html">Como Comprar</a></li>
+                        <li><a href="devolucoes.html">Política de Devolução</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="termos.html">Termos e Condições</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 2chance. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-advanced.js"></script>
+</body>
+</html>

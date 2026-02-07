@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html">Início</a>
+                        <a href="produtos.html">Produtos</a>
+                        <a href="categorias.html">Categorias</a>
+                        <a href="about.html">Sobre Nós</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="btn-icon" id="searchBtn"><i class="fas fa-search"></i></button>
+                        <button class="btn-icon" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="badge">0</span></button>
+                        <button class="btn-icon" id="userBtn"><i class="fas fa-user"></i></button>
+                        <button class="btn-primary" id="sellNowBtn">Vender Agora</button>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Procurar..." class="search-input">
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <i class="fas fa-envelope page-hero-icon"></i>
+                <h1 class="page-title">As Minhas Mensagens</h1>
+                <p class="page-subtitle">Gerencie e acompanhe tudo numa só plataforma</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            
+<div class="messages-container">
+    <div class="messages-sidebar">
+        <div class="messages-search">
+            <input type="text" placeholder="Procurar mensagens...">
+            <i class="fas fa-search"></i>
+        </div>
+        
+        <div class="messages-list">
+            <div class="message-preview active">
+                <img src="https://i.pravatar.cc/50?img=5" alt="User">
+                <div class="preview-content">
+                    <div class="preview-header">
+                        <h4>Maria Santos</h4>
+                        <span class="message-time">10:30</span>
+                    </div>
+                    <p class="last-message">Ainda está disponível?</p>
+                    <span class="unread-badge">2</span>
+                </div>
+            </div>
+
+            <div class="message-preview">
+                <img src="https://i.pravatar.cc/50?img=8" alt="User">
+                <div class="preview-content">
+                    <div class="preview-header">
+                        <h4>Carlos Pereira</h4>
+                        <span class="message-time">Ontem</span>
+                    </div>
+                    <p class="last-message">Obrigado pela compra!</p>
+                </div>
+            </div>
+
+            <div class="message-preview">
+                <img src="https://i.pravatar.cc/50?img=15" alt="User">
+                <div class="preview-content">
+                    <div class="preview-header">
+                        <h4>Ana Costa</h4>
+                        <span class="message-time">3 dias</span>
+                    </div>
+                    <p class="last-message">Pode enviar mais fotos?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="messages-content">
+        <div class="chat-header">
+            <div class="chat-user-info">
+                <img src="https://i.pravatar.cc/50?img=5" alt="Maria Santos">
+                <div>
+                    <h3>Maria Santos</h3>
+                    <span class="user-status">Online</span>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button><i class="fas fa-phone"></i></button>
+                <button><i class="fas fa-info-circle"></i></button>
+            </div>
+        </div>
+
+        <div class="chat-messages">
+            <div class="chat-message received">
+                <img src="https://i.pravatar.cc/40?img=5" alt="Maria">
+                <div class="message-bubble">
+                    <p>Olá! Ainda tem o produto disponível?</p>
+                    <span class="message-timestamp">10:25</span>
+                </div>
+            </div>
+
+            <div class="chat-message sent">
+                <div class="message-bubble">
+                    <p>Sim, ainda está disponível! Está interessada?</p>
+                    <span class="message-timestamp">10:27</span>
+                </div>
+            </div>
+
+            <div class="chat-message received">
+                <img src="https://i.pravatar.cc/40?img=5" alt="Maria">
+                <div class="message-bubble">
+                    <p>Sim! Pode fazer envio para Lisboa?</p>
+                    <span class="message-timestamp">10:30</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <button class="btn-attach"><i class="fas fa-paperclip"></i></button>
+            <input type="text" placeholder="Escreve a tua mensagem...">
+            <button class="btn-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><i class="fas fa-recycle"></i><span>2chance</span></div>
+                    <p class="footer-desc">A plataforma portuguesa de compra e venda em segunda mão.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 2chance. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-advanced.js"></script>
+</body>
+</html>

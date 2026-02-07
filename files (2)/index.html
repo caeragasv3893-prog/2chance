@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2chance - Compra e Vende em Segunda Mão</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html" class="active">Início</a>
+                        <a href="produtos.html">Produtos</a>
+                        <a href="categorias.html">Categorias</a>
+                        <a href="about.html">Sobre Nós</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="btn-icon" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn-icon" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </button>
+                        <button class="btn-icon" id="userBtn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="btn-primary" id="sellNowBtn">Vender Agora</button>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Search Bar Expandível -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Procurar produtos, marcas..." class="search-input">
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Dá uma <span class="highlight">Segunda Chance</span> aos produtos <br>que já não usas</h1>
+                <p class="hero-subtitle">Compra e vende produtos usados de forma sustentável e económica</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="O que procuras hoje?" class="hero-search-input">
+                    <select class="hero-search-select">
+                        <option>Todas as Categorias</option>
+                        <option>Eletrónica</option>
+                        <option>Moda</option>
+                        <option>Casa</option>
+                        <option>Desporto</option>
+                        <option>Livros</option>
+                    </select>
+                    <button class="btn-search">
+                        <i class="fas fa-search"></i> Procurar
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-box"></i>
+                        <div>
+                            <strong>15.432</strong>
+                            <span>Produtos</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>8.921</strong>
+                            <span>Utilizadores</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>12.156</strong>
+                            <span>Vendas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias Principais -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explora por Categoria</h2>
+            <div class="categories-grid">
+                <a href="categorias.html?cat=eletronica" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Eletrónica</h3>
+                    <p>2.345 produtos</p>
+                </a>
+                <a href="categorias.html?cat=moda" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Moda</h3>
+                    <p>4.567 produtos</p>
+                </a>
+                <a href="categorias.html?cat=casa" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Casa & Jardim</h3>
+                    <p>1.890 produtos</p>
+                </a>
+                <a href="categorias.html?cat=desporto" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3>Desporto</h3>
+                    <p>987 produtos</p>
+                </a>
+                <a href="categorias.html?cat=livros" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Livros</h3>
+                    <p>3.210 produtos</p>
+                </a>
+                <a href="categorias.html?cat=brinquedos" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Brinquedos</h3>
+                    <p>1.543 produtos</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <a href="produtos.html" class="btn-text">Ver Todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Headphones">
+                        <span class="product-badge">Quase Novo</span>
+                        <button class="btn-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Eletrónica</div>
+                        <h3 class="product-title">Headphones Bluetooth Sony WH-1000XM4</h3>
+                        <div class="product-meta">
+                            <span class="product-location"><i class="fas fa-map-marker-alt"></i> Lisboa</span>
+                            <span class="product-time"><i class="far fa-clock"></i> Há 2 horas</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="current-price">189€</span>
+                                <span class="original-price">350€</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Watch">
+                        <span class="product-badge popular">Popular</span>
+                        <button class="btn-favorite active">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Moda</div>
+                        <h3 class="product-title">Relógio Clássico Couro Genuíno</h3>
+                        <div class="product-meta">
+                            <span class="product-location"><i class="fas fa-map-marker-alt"></i> Porto</span>
+                            <span class="product-time"><i class="far fa-clock"></i> Há 5 horas</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="current-price">45€</span>
+                                <span class="original-price">120€</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop" alt="Sneakers">
+                        <span class="product-badge">Como Novo</span>
+                        <button class="btn-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Moda</div>
+                        <h3 class="product-title">Ténis Desportivos Nike Air Max</h3>
+                        <div class="product-meta">
+                            <span class="product-location"><i class="fas fa-map-marker-alt"></i> Braga</span>
+                            <span class="product-time"><i class="far fa-clock"></i> Há 1 dia</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="current-price">65€</span>
+                                <span class="original-price">140€</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585399000684-d2f72660f092?w=400&h=400&fit=crop" alt="Camera">
+                        <span class="product-badge">Bom Estado</span>
+                        <button class="btn-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Eletrónica</div>
+                        <h3 class="product-title">Câmara Digital Canon EOS 2000D</h3>
+                        <div class="product-meta">
+                            <span class="product-location"><i class="fas fa-map-marker-alt"></i> Coimbra</span>
+                            <span class="product-time"><i class="far fa-clock"></i> Há 3 horas</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="current-price">320€</span>
+                                <span class="original-price">550€</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Publica o Teu Produto</h3>
+                    <p>Tira fotos, adiciona descrição e define o preço. É grátis e demora apenas alguns minutos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Comunica com Compradores</h3>
+                    <p>Recebe mensagens, responde a perguntas e negocia diretamente com interessados.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Combina e Vende</h3>
+                    <p>Escolhe o método de entrega, recebe o pagamento e finaliza a transação em segurança.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Compra Segura</h3>
+                    <p>Sistema de proteção ao comprador e verificação de vendedores</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustentável</h3>
+                    <p>Contribui para um consumo mais consciente e ecológico</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Economia</h3>
+                    <p>Poupa até 70% em produtos de qualidade</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Entrega Rápida</h3>
+                    <p>Múltiplas opções de envio e entrega ao domicílio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Começar?</h2>
+                <p>Junta-te a milhares de pessoas que já deram uma segunda chance aos seus produtos</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary-large">Criar Conta Grátis</button>
+                    <button class="btn-secondary-large">Explorar Produtos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <p class="footer-desc">A plataforma portuguesa de compra e venda de produtos em segunda mão. Sustentável, económica e segura.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="produtos.html">Todos os Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="vendedores.html">Vendedores Verificados</a></li>
+                        <li><a href="promocoes.html">Promoções</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="contact.html">Ajuda</a></li>
+                        <li><a href="como-vender.html">Como Vender</a></li>
+                        <li><a href="como-comprar.html">Como Comprar</a></li>
+                        <li><a href="devolucoes.html">Política de Devolução</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="termos.html">Termos e Condições</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 2chance. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-advanced.js"></script>
+</body>
+</html>

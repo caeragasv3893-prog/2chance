@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <!-- Animated Background -->
+    <div class="auth-background">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+        <div class="bg-shape shape-4"></div>
+    </div>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <!-- Left Side - Branding -->
+        <div class="auth-branding">
+            <div class="auth-branding-content">
+                <div class="logo-large">
+                    <i class="fas fa-recycle"></i>
+                    <span>2chance</span>
+                </div>
+                <h1>Junta-te à Revolução!</h1>
+                <p>Cria a tua conta e começa a comprar e vender de forma sustentável.</p>
+                
+                <div class="signup-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>10€ de Boas-vindas</h4>
+                            <p>Recebe crédito na primeira compra</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Envio Grátis</h4>
+                            <p>Na primeira encomenda</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Alertas Personalizados</h4>
+                            <p>Recebe notificações de produtos</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>100% Seguro</h4>
+                            <p>Compra protegida</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <img src="https://i.pravatar.cc/80?img=5" alt="Maria">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Adorei a experiência! Já vendi 15 produtos e poupei muito dinheiro em compras."</p>
+                        <div class="testimonial-author">
+                            <strong>Maria Santos</strong>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Register Form -->
+        <div class="auth-form-container">
+            <div class="auth-form-wrapper">
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Início
+                </a>
+
+                <div class="auth-header">
+                    <h2>Criar Conta</h2>
+                    <p>Preenche os campos abaixo para te registares</p>
+                </div>
+
+                <!-- Social Signup -->
+                <div class="social-login">
+                    <button class="btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Registar com Google
+                    </button>
+                    <button class="btn-social btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Registar com Facebook
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>ou com email</span>
+                </div>
+
+                <!-- Register Form -->
+                <form class="auth-form" id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">
+                                <i class="fas fa-user"></i>
+                                Nome
+                            </label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                placeholder="João"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">
+                                <i class="fas fa-user"></i>
+                                Apelido
+                            </label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                placeholder="Silva"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailReg">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </label>
+                        <input 
+                            type="email" 
+                            id="emailReg" 
+                            name="email" 
+                            placeholder="o-teu-email@exemplo.com"
+                            required
+                        >
+                        <small class="form-hint">Usaremos este email para comunicações importantes</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            <i class="fas fa-phone"></i>
+                            Telemóvel (opcional)
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+351 912 345 678"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passwordReg">
+                            <i class="fas fa-lock"></i>
+                            Password
+                        </label>
+                        <div class="password-input">
+                            <input 
+                                type="password" 
+                                id="passwordReg" 
+                                name="password" 
+                                placeholder="Mínimo 8 caracteres"
+                                required
+                                minlength="8"
+                            >
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar"></div>
+                            <span class="strength-text">Força da password</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">
+                            <i class="fas fa-lock"></i>
+                            Confirmar Password
+                        </label>
+                        <div class="password-input">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                placeholder="Repete a password"
+                                required
+                            >
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            <span>Aceito os <a href="termos.html" target="_blank">Termos e Condições</a> e a <a href="privacidade.html" target="_blank">Política de Privacidade</a></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter">
+                            <span>Quero receber ofertas e novidades por email</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Criar Conta Grátis</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Já tens conta? <a href="login.html">Iniciar Sessão</a></p>
+                </div>
+
+                <div class="auth-security">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Os teus dados estão seguros connosco</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-advanced.js"></script>
+    <script>
+        // Password Strength Checker
+        const passwordInput = document.getElementById('passwordReg');
+        const strengthBar = document.querySelector('.strength-bar');
+        const strengthText = document.querySelector('.strength-text');
+
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+            
+            if (password.length >= 8) strength++;
+            if (password.match(/[a-z]+/)) strength++;
+            if (password.match(/[A-Z]+/)) strength++;
+            if (password.match(/[0-9]+/)) strength++;
+            if (password.match(/[$@#&!]+/)) strength++;
+            
+            strengthBar.className = 'strength-bar';
+            
+            switch(strength) {
+                case 0:
+                case 1:
+                    strengthBar.classList.add('weak');
+                    strengthText.textContent = 'Fraca';
+                    break;
+                case 2:
+                    strengthBar.classList.add('fair');
+                    strengthText.textContent = 'Razoável';
+                    break;
+                case 3:
+                    strengthBar.classList.add('good');
+                    strengthText.textContent = 'Boa';
+                    break;
+                case 4:
+                case 5:
+                    strengthBar.classList.add('strong');
+                    strengthText.textContent = 'Forte';
+                    break;
+            }
+        });
+
+        // Register Form Handler
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('passwordReg').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                showNotification('As passwords não coincidem!', 'error');
+                return;
+            }
+            
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('emailReg').value,
+                phone: document.getElementById('phone').value,
+                password: password,
+                newsletter: document.querySelector('input[name="newsletter"]').checked
+            };
+            
+            // Show loading
+            const submitBtn = this.querySelector('.btn-submit');
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> A criar conta...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Mock successful registration
+                const user = {
+                    id: Math.random().toString(36).substr(2, 9),
+                    name: `${formData.firstName} ${formData.lastName}`,
+                    email: formData.email,
+                    phone: formData.phone,
+                    avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70)}`,
+                    member_since: new Date().toISOString().split('T')[0],
+                    verified: false
+                };
+                
+                // Save to localStorage
+                localStorage.setItem('2chance_user', JSON.stringify(user));
+                localStorage.setItem('2chance_token', 'mock_jwt_token_' + Date.now());
+                
+                // Show success
+                showNotification('✅ Conta criada com sucesso! Bem-vindo à 2chance!', 'success');
+                
+                // Redirect to profile
+                setTimeout(() => {
+                    window.location.href = 'perfil.html';
+                }, 1500);
+            }, 2000);
+        });
+
+        // Toggle Password Visibility
+        document.querySelectorAll('.toggle-password').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                const icon = this.querySelector('i');
+                
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('fa-eye', 'fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('fa-eye-slash', 'fa-eye');
+                }
+            });
+        });
+
+        // Social Login Handlers
+        document.querySelectorAll('.btn-social').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const provider = this.classList.contains('btn-google') ? 'Google' : 'Facebook';
+                showNotification(`Registo com ${provider} será implementado com OAuth`, 'info');
+            });
+        });
+    </script>
+</body>
+</html>

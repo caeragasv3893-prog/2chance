@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Meu Perfil - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html">Início</a>
+                        <a href="produtos.html">Produtos</a>
+                        <a href="categorias.html">Categorias</a>
+                        <a href="about.html">Sobre Nós</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="btn-icon" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn-icon" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </button>
+                        <button class="btn-icon" id="userBtn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="btn-primary" id="sellNowBtn">Vender Agora</button>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Procurar produtos, marcas..." class="search-input">
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Hero -->
+    <section class="profile-hero">
+        <div class="container">
+            <div class="profile-hero-content">
+                <div class="profile-avatar-wrapper">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Avatar" class="profile-avatar" id="userAvatar">
+                    <button class="change-avatar-btn" id="changeAvatarBtn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <h1 id="userName">João Silva</h1>
+                    <p class="profile-email" id="userEmail">joao.silva@example.com</p>
+                    <div class="profile-badges">
+                        <span class="badge-verified">
+                            <i class="fas fa-check-circle"></i> Verificado
+                        </span>
+                        <span class="badge-member">
+                            <i class="fas fa-calendar"></i> Membro desde Jan 2023
+                        </span>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Produtos Vendidos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Compras</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Avaliação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-layout">
+                <!-- Sidebar -->
+                <aside class="profile-sidebar">
+                    <nav class="profile-menu">
+                        <a href="#" class="profile-menu-item active" data-tab="overview">
+                            <i class="fas fa-th-large"></i>
+                            <span>Visão Geral</span>
+                        </a>
+                        <a href="encomendas.html" class="profile-menu-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>As Minhas Encomendas</span>
+                            <span class="menu-badge">3</span>
+                        </a>
+                        <a href="favoritos.html" class="profile-menu-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Favoritos</span>
+                            <span class="menu-badge">15</span>
+                        </a>
+                        <a href="mensagens.html" class="profile-menu-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Mensagens</span>
+                            <span class="menu-badge">2</span>
+                        </a>
+                        <a href="meus-produtos.html" class="profile-menu-item">
+                            <i class="fas fa-box"></i>
+                            <span>Os Meus Produtos</span>
+                        </a>
+                        <a href="vendas.html" class="profile-menu-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Vendas</span>
+                        </a>
+                        <a href="avaliacoes.html" class="profile-menu-item">
+                            <i class="fas fa-star"></i>
+                            <span>Avaliações</span>
+                        </a>
+                        <a href="carteira.html" class="profile-menu-item">
+                            <i class="fas fa-wallet"></i>
+                            <span>Carteira</span>
+                        </a>
+                        <hr class="menu-divider">
+                        <a href="configuracoes.html" class="profile-menu-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                        <a href="ajuda.html" class="profile-menu-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Ajuda</span>
+                        </a>
+                        <a href="#" class="profile-menu-item text-danger" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Terminar Sessão</span>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="profile-content">
+                    <!-- Overview Tab -->
+                    <div class="profile-tab active" id="overviewTab">
+                        <h2 class="section-title">Bem-vindo de volta!</h2>
+                        
+                        <!-- Quick Actions -->
+                        <div class="quick-actions-grid">
+                            <div class="quick-action-card">
+                                <div class="qa-icon">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <h3>Vender Produto</h3>
+                                <p>Publica um novo produto</p>
+                                <button class="btn-qa" id="sellNowBtn2">Começar</button>
+                            </div>
+                            <div class="quick-action-card">
+                                <div class="qa-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h3>Procurar Produtos</h3>
+                                <p>Encontra o que procuras</p>
+                                <a href="produtos.html" class="btn-qa">Explorar</a>
+                            </div>
+                            <div class="quick-action-card">
+                                <div class="qa-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3>Mensagens</h3>
+                                <p>2 novas mensagens</p>
+                                <a href="mensagens.html" class="btn-qa">Ver</a>
+                            </div>
+                            <div class="quick-action-card">
+                                <div class="qa-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h3>Rastrear Encomenda</h3>
+                                <p>3 encomendas ativas</p>
+                                <a href="encomendas.html" class="btn-qa">Rastrear</a>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="profile-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-history"></i> Atividade Recente</h3>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon success">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Compra realizada</h4>
+                                        <p>Headphones Sony WH-1000XM4</p>
+                                        <span class="activity-time">Há 2 horas</span>
+                                    </div>
+                                    <div class="activity-amount">189€</div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon info">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Produto adicionado aos favoritos</h4>
+                                        <p>MacBook Air M1</p>
+                                        <span class="activity-time">Há 5 horas</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon warning">
+                                        <i class="fas fa-tag"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Produto publicado</h4>
+                                        <p>iPhone 13 Pro 128GB</p>
+                                        <span class="activity-time">Há 1 dia</span>
+                                    </div>
+                                    <div class="activity-amount">750€</div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon success">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Venda concluída</h4>
+                                        <p>Câmara Canon EOS 2000D</p>
+                                        <span class="activity-time">Há 2 dias</span>
+                                    </div>
+                                    <div class="activity-amount">+320€</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div class="profile-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-lightbulb"></i> Recomendados Para Ti</h3>
+                            </div>
+                            <div class="recommendations-grid">
+                                <div class="recommendation-card">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop" alt="Produto">
+                                    <div class="rec-content">
+                                        <h4>Headphones Bluetooth</h4>
+                                        <p class="rec-price">149€</p>
+                                        <button class="btn-rec">Ver</button>
+                                    </div>
+                                </div>
+                                <div class="recommendation-card">
+                                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop" alt="Produto">
+                                    <div class="rec-content">
+                                        <h4>Smartwatch Apple</h4>
+                                        <p class="rec-price">299€</p>
+                                        <button class="btn-rec">Ver</button>
+                                    </div>
+                                </div>
+                                <div class="recommendation-card">
+                                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=200&fit=crop" alt="Produto">
+                                    <div class="rec-content">
+                                        <h4>Ténis Running Nike</h4>
+                                        <p class="rec-price">89€</p>
+                                        <button class="btn-rec">Ver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <p class="footer-desc">A plataforma portuguesa de compra e venda de produtos em segunda mão.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="produtos.html">Todos os Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="vendedores.html">Vendedores Verificados</a></li>
+                        <li><a href="promocoes.html">Promoções</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="contact.html">Ajuda</a></li>
+                        <li><a href="como-vender.html">Como Vender</a></li>
+                        <li><a href="como-comprar.html">Como Comprar</a></li>
+                        <li><a href="devolucoes.html">Política de Devolução</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="termos.html">Termos e Condições</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 2chance. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-advanced.js"></script>
+    <script>
+        // Load user data
+        window.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('2chance_user'));
+            
+            if (!user) {
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Update UI with user data
+            document.getElementById('userName').textContent = user.name;
+            document.getElementById('userEmail').textContent = user.email;
+            document.getElementById('userAvatar').src = user.avatar;
+        });
+
+        // Logout Handler
+        document.getElementById('logoutBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (confirm('Tens a certeza que queres terminar sessão?')) {
+                localStorage.removeItem('2chance_user');
+                localStorage.removeItem('2chance_token');
+                showNotification('Sessão terminada com sucesso', 'info');
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            }
+        });
+
+        // Change Avatar
+        document.getElementById('changeAvatarBtn').addEventListener('click', function() {
+            showNotification('Upload de imagem será implementado com backend', 'info');
+        });
+    </script>
+</body>
+</html>

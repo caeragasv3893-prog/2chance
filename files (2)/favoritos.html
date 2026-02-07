@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Meus Favoritos - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html">Início</a>
+                        <a href="produtos.html">Produtos</a>
+                        <a href="categorias.html">Categorias</a>
+                        <a href="about.html">Sobre Nós</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="btn-icon" id="searchBtn"><i class="fas fa-search"></i></button>
+                        <button class="btn-icon" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="badge">0</span></button>
+                        <button class="btn-icon" id="userBtn"><i class="fas fa-user"></i></button>
+                        <button class="btn-primary" id="sellNowBtn">Vender Agora</button>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Procurar..." class="search-input">
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <i class="fas fa-heart page-hero-icon"></i>
+                <h1 class="page-title">Os Meus Favoritos</h1>
+                <p class="page-subtitle">Gerencie e acompanhe tudo numa só plataforma</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            
+<div class="favorites-header">
+    <h2>Tens 15 produtos nos favoritos</h2>
+    <button class="btn-clear-favorites">Limpar Todos</button>
+</div>
+
+<div class="favorites-grid">
+    <div class="product-card favorite-product">
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Produto">
+            <span class="product-badge">Quase Novo</span>
+            <button class="btn-favorite active"><i class="fas fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+            <div class="product-category">Eletrónica</div>
+            <h3 class="product-title">Headphones Sony WH-1000XM4</h3>
+            <div class="product-price">
+                <span class="current-price">189€</span>
+                <span class="original-price">299€</span>
+            </div>
+            <div class="product-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-remove-fav"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card favorite-product">
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400" alt="Produto">
+            <span class="product-badge">Como Novo</span>
+            <button class="btn-favorite active"><i class="fas fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+            <div class="product-category">Eletrónica</div>
+            <h3 class="product-title">MacBook Air M1 13" 256GB</h3>
+            <div class="product-price">
+                <span class="current-price">750€</span>
+                <span class="original-price">1200€</span>
+            </div>
+            <div class="product-actions">
+                <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Adicionar</button>
+                <button class="btn-remove-fav"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><i class="fas fa-recycle"></i><span>2chance</span></div>
+                    <p class="footer-desc">A plataforma portuguesa de compra e venda em segunda mão.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 2chance. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-advanced.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html">Início</a>
+                        <a href="produtos.html">Produtos</a>
+                        <a href="categorias.html" class="active">Categorias</a>
+                        <a href="about.html">Sobre Nós</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="btn-icon" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn-icon" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </button>
+                        <button class="btn-icon" id="userBtn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="btn-primary" id="sellNowBtn">Vender Agora</button>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Explora por Categoria</h1>
+            <p class="page-subtitle">Encontra exatamente o que procuras nas nossas categorias organizadas</p>
+        </div>
+    </section>
+
+    <!-- Main Categories -->
+    <section class="categories-showcase">
+        <div class="container">
+            <div class="categories-large-grid">
+                <!-- Eletrónica -->
+                <div class="category-showcase-card">
+                    <div class="category-showcase-image">
+                        <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=600&h=400&fit=crop" alt="Eletrónica">
+                    </div>
+                    <div class="category-showcase-content">
+                        <div class="category-showcase-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h2>Eletrónica</h2>
+                        <p>Computadores, telemóveis, tablets e mais</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-box"></i> 2.345 produtos</span>
+                            <span><i class="fas fa-tag"></i> Desde 15€</span>
+                        </div>
+                        <div class="subcategories">
+                            <a href="#">Computadores</a>
+                            <a href="#">Telemóveis</a>
+                            <a href="#">Tablets</a>
+                            <a href="#">Audio</a>
+                            <a href="#">Gaming</a>
+                        </div>
+                        <button class="btn-category">Ver Produtos</button>
+                    </div>
+                </div>
+
+                <!-- Moda -->
+                <div class="category-showcase-card">
+                    <div class="category-showcase-image">
+                        <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&h=400&fit=crop" alt="Moda">
+                    </div>
+                    <div class="category-showcase-content">
+                        <div class="category-showcase-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h2>Moda & Acessórios</h2>
+                        <p>Roupa, calçado e acessórios para todos</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-box"></i> 4.567 produtos</span>
+                            <span><i class="fas fa-tag"></i> Desde 5€</span>
+                        </div>
+                        <div class="subcategories">
+                            <a href="#">Homem</a>
+                            <a href="#">Mulher</a>
+                            <a href="#">Criança</a>
+                            <a href="#">Calçado</a>
+                            <a href="#">Acessórios</a>
+                        </div>
+                        <button class="btn-category">Ver Produtos</button>
+                    </div>
+                </div>
+
+                <!-- Casa & Jardim -->
+                <div class="category-showcase-card">
+                    <div class="category-showcase-image">
+                        <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=600&h=400&fit=crop" alt="Casa">
+                    </div>
+                    <div class="category-showcase-content">
+                        <div class="category-showcase-icon">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h2>Casa & Jardim</h2>
+                        <p>Mobília, decoração e artigos para o lar</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-box"></i> 1.890 produtos</span>
+                            <span><i class="fas fa-tag"></i> Desde 10€</span>
+                        </div>
+                        <div class="subcategories">
+                            <a href="#">Mobília</a>
+                            <a href="#">Decoração</a>
+                            <a href="#">Cozinha</a>
+                            <a href="#">Jardim</a>
+                            <a href="#">Ferramentas</a>
+                        </div>
+                        <button class="btn-category">Ver Produtos</button>
+                    </div>
+                </div>
+
+                <!-- Desporto -->
+                <div class="category-showcase-card">
+                    <div class="category-showcase-image">
+                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop" alt="Desporto">
+                    </div>
+                    <div class="category-showcase-content">
+                        <div class="category-showcase-icon">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                        <h2>Desporto & Lazer</h2>
+                        <p>Equipamento desportivo e outdoor</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-box"></i> 987 produtos</span>
+                            <span><i class="fas fa-tag"></i> Desde 8€</span>
+                        </div>
+                        <div class="subcategories">
+                            <a href="#">Ginásio</a>
+                            <a href="#">Ciclismo</a>
+                            <a href="#">Futebol</a>
+                            <a href="#">Outdoor</a>
+                            <a href="#">Natação</a>
+                        </div>
+                        <button class="btn-category">Ver Produtos</button>
+                    </div>
+                </div>
+
+                <!-- Livros -->
+                <div class="category-showcase-card">
+                    <div class="category-showcase-image">
+                        <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600&h=400&fit=crop" alt="Livros">
+                    </div>
+                    <div class="category-showcase-content">
+                        <div class="category-showcase-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h2>Livros & Multimédia</h2>
+                        <p>Livros, filmes, música e jogos</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-box"></i> 3.210 produtos</span>
+                            <span><i class="fas fa-tag"></i> Desde 3€</span>
+                        </div>
+                        <div class="subcategories">
+                            <a href="#">Livros</a>
+                            <a href="#">Filmes</a>
+                            <a href="#">Música</a>
+                            <a href="#">Videojogos</a>
+                            <a href="#">Revistas</a>
+                        </div>
+                        <button class="btn-category">Ver Produtos</button>
+                    </div>
+                </div>
+
+                <!-- Brinquedos -->
+                <div class="category-showcase-card">
+                    <div class="category-showcase-image">
+                        <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&h=400&fit=crop" alt="Brinquedos">
+                    </div>
+                    <div class="category-showcase-content">
+                        <div class="category-showcase-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h2>Brinquedos & Bebé</h2>
+                        <p>Brinquedos, roupa e artigos para bebé</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-box"></i> 1.543 produtos</span>
+                            <span><i class="fas fa-tag"></i> Desde 5€</span>
+                        </div>
+                        <div class="subcategories">
+                            <a href="#">Brinquedos</a>
+                            <a href="#">Roupa Bebé</a>
+                            <a href="#">Puericultura</a>
+                            <a href="#">Jogos</a>
+                            <a href="#">Educativos</a>
+                        </div>
+                        <button class="btn-category">Ver Produtos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias Populares -->
+    <section class="trending-categories">
+        <div class="container">
+            <h2 class="section-title">Categorias Populares Este Mês</h2>
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <div class="trending-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Telemóveis</h3>
+                    <p class="trending-count">+342 novos produtos</p>
+                    <div class="trending-badge">🔥 Em Alta</div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h3>Bicicletas</h3>
+                    <p class="trending-count">+156 novos produtos</p>
+                    <div class="trending-badge">⭐ Popular</div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h3>Câmaras</h3>
+                    <p class="trending-count">+98 novos produtos</p>
+                    <div class="trending-badge">📈 A Crescer</div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitness</h3>
+                    <p class="trending-count">+203 novos produtos</p>
+                    <div class="trending-badge">💪 Tendência</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <p class="footer-desc">A plataforma portuguesa de compra e venda de produtos em segunda mão. Sustentável, económica e segura.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="produtos.html">Todos os Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="vendedores.html">Vendedores Verificados</a></li>
+                        <li><a href="promocoes.html">Promoções</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="contact.html">Ajuda</a></li>
+                        <li><a href="como-vender.html">Como Vender</a></li>
+                        <li><a href="como-comprar.html">Como Comprar</a></li>
+                        <li><a href="devolucoes.html">Política de Devolução</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="termos.html">Termos e Condições</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 2chance. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-advanced.js"></script>
+</body>
+</html>

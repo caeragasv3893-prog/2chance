@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - 2chance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html">Início</a>
+                        <a href="produtos.html">Produtos</a>
+                        <a href="categorias.html">Categorias</a>
+                        <a href="about.html">Sobre Nós</a>
+                        <a href="contact.html" class="active">Contacto</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="btn-icon" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn-icon" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </button>
+                        <button class="btn-icon" id="userBtn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="btn-primary" id="sellNowBtn">Vender Agora</button>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Fala Connosco</h1>
+            <p class="page-subtitle">Estamos aqui para ajudar. Entre em contacto e responderemos o mais rápido possível.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulário de Contacto -->
+                <div class="contact-form-wrapper">
+                    <h2>Envia-nos uma Mensagem</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nome</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Apelido</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone (opcional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Seleciona um assunto</option>
+                                <option value="suporte">Suporte Técnico</option>
+                                <option value="vendas">Questões de Vendas</option>
+                                <option value="compras">Questões de Compras</option>
+                                <option value="conta">Problemas com Conta</option>
+                                <option value="pagamento">Pagamentos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Quero receber novidades e ofertas por email</label>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Informações de Contacto -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <h3>Informações de Contacto</h3>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Morada</h4>
+                                <p>Avenida da Liberdade, 123<br>1250-142 Lisboa, Portugal</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefone</h4>
+                                <p>+351 21 123 4567<br>Seg-Sex: 9h-18h</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6a5a3a6b9a4a2b396e4b5beb7b8b5b3f8a6a2">[email&#160;protected]</a><br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="71181f171e31431219101f12145f0105">[email&#160;protected]</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Horário de Atendimento</h4>
+                                <p>Segunda a Sexta: 9h - 18h<br>Sábado: 10h - 14h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Rápido -->
+                    <div class="quick-faq">
+                        <h3>Perguntas Frequentes</h3>
+                        <div class="faq-item">
+                            <h4><i class="fas fa-question-circle"></i> Como vendo um produto?</h4>
+                            <p>Regista-te, clica em "Vender Agora", adiciona fotos e detalhes do produto.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4><i class="fas fa-question-circle"></i> É seguro comprar aqui?</h4>
+                            <p>Sim! Temos sistema de proteção ao comprador e verificação de vendedores.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4><i class="fas fa-question-circle"></i> Quanto tempo demora o envio?</h4>
+                            <p>Depende do método escolhido, mas normalmente 2-5 dias úteis.</p>
+                        </div>
+                        <a href="#" class="faq-link">Ver todas as perguntas →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Visita-nos</h2>
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.954698768483!2d-9.145943484707418!3d38.7222524796176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19347f6b1e6e53%3A0x4b8c0b0b0b0b0b0b!2sAv.%20da%20Liberdade%2C%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1234567890123!5m2!1spt-PT!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canais de Suporte -->
+    <section class="support-channels">
+        <div class="container">
+            <h2 class="section-title">Outros Canais de Suporte</h2>
+            <div class="channels-grid">
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Chat ao Vivo</h3>
+                    <p>Fala connosco em tempo real</p>
+                    <button class="btn-channel">Iniciar Chat</button>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+351 91 234 5678</p>
+                    <button class="btn-channel">Abrir WhatsApp</button>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Centro de Ajuda</h3>
+                    <p>Artigos e tutoriais</p>
+                    <button class="btn-channel">Ver Artigos</button>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </div>
+                    <h3>Messenger</h3>
+                    <p>Contacta-nos no Facebook</p>
+                    <button class="btn-channel">Enviar Mensagem</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>2chance</span>
+                    </div>
+                    <p class="footer-desc">A plataforma portuguesa de compra e venda de produtos em segunda mão. Sustentável, económica e segura.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="produtos.html">Todos os Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="vendedores.html">Vendedores Verificados</a></li>
+                        <li><a href="promocoes.html">Promoções</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="contact.html">Ajuda</a></li>
+                        <li><a href="como-vender.html">Como Vender</a></li>
+                        <li><a href="como-comprar.html">Como Comprar</a></li>
+                        <li><a href="devolucoes.html">Política de Devolução</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="termos.html">Termos e Condições</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 2chance. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-masterca
